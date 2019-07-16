@@ -1,0 +1,789 @@
+{
+	"info": {
+		"_postman_id": "5f22adfb-2f08-45d2-89a7-cf6d5a9fcff6",
+		"name": "GOLANG-SAMPLE-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 11:44:58 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Nur Yaumi\",\n            \"skinType\": \"oily acne prone\",\n            \"age\": 20,\n            \"updatedAt\": \"2019-07-16T19:41:27+08:00\",\n            \"createdAt\": \"2019-07-16T19:41:27+08:00\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Yaumi Nur\",\n            \"skinType\": \"dry sensitive\",\n            \"age\": 25,\n            \"updatedAt\": \"2019-07-16T19:42:04+08:00\",\n            \"createdAt\": \"2019-07-16T19:42:04+08:00\"\n        }\n    ],\n    \"status\": {\n        \"message\": \"data fetched\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\" : {\n\t\t\"name\" : \"Yaumi Nur\",\n\t\t\"skinType\" : \"dry sensitive\",\n\t\t\"age\" : 25\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"name\" : \"Yaumi Nur\",\n\t\t\"skinType\" : \"dry sensitive\",\n\t\t\"age\" : 25\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 11:42:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "202"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Yaumi Nur\",\n        \"skinType\": \"dry sensitive\",\n        \"age\": 25,\n        \"updatedAt\": \"2019-07-16T19:42:04.319742+08:00\",\n        \"createdAt\": \"2019-07-16T19:42:04.319742+08:00\"\n    },\n    \"status\": {\n        \"message\": \"data created\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Single User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Single User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 11:46:28 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Nur Yaumi\",\n        \"skinType\": \"oily acne prone\",\n        \"age\": 20,\n        \"updatedAt\": \"2019-07-16T19:41:27+08:00\",\n        \"createdAt\": \"2019-07-16T19:41:27+08:00\"\n    },\n    \"status\": {\n        \"message\": \"data fetched\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\" : {\n\t\t\"name\" : \"Yaumi Nur Update\",\n\t\t\"skinType\" : \"dry sensitive\",\n\t\t\"age\" : 24\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"name\" : \"Yaumi Nur Update\",\n\t\t\"skinType\" : \"dry sensitive\",\n\t\t\"age\" : 24\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 11:47:08 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "202"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Yaumi Nur Update\",\n        \"skinType\": \"dry sensitive\",\n        \"age\": 24,\n        \"updatedAt\": \"2019-07-16T19:47:08.645229+08:00\",\n        \"createdAt\": \"2019-07-16T19:42:04+08:00\"\n    },\n    \"status\": {\n        \"message\": \"data updated\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Skincare",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\" : {\n\t\t\"brand\" : \"Senka\",\n\t\t\"name\" : \"Senka Perfect Whip\",\n\t\t\"productType\" : \"Facial Wash\", \n\t\t\"skinConcern\" : \"normal to dry\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/2/skincare",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"2",
+						"skincare"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Skincare",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"brand\" : \"Hada Labo\",\n\t\t\"name\" : \"Hada Labo Gokujyun Lotion\",\n\t\t\"productType\" : \"Hydrating Toner\", \n\t\t\"skinConcern\" : \"normal\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/1/skincare",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"1",
+								"skincare"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 11:51:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "268"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"userId\": 1,\n        \"brand\": \"Hada Labo\",\n        \"name\": \"Hada Labo Gokujyun Lotion\",\n        \"productType\": \"Hydrating Toner\",\n        \"skinConcern\": \"normal\",\n        \"updatedAt\": \"2019-07-16T19:51:52.198327+08:00\",\n        \"createdAt\": \"2019-07-16T19:51:52.198327+08:00\"\n    },\n    \"status\": {\n        \"message\": \"data created\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Skincare By User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/1/skincare",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"1",
+						"skincare"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Skincare By User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/1/skincare",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"1",
+								"skincare"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 11:56:49 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "481"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"userId\": 1,\n            \"brand\": \"Hada Labo\",\n            \"name\": \"Hada Labo Gokujyun Lotion\",\n            \"productType\": \"Hydrating Toner\",\n            \"skinConcern\": \"normal\",\n            \"updatedAt\": \"2019-07-16T19:51:52+08:00\",\n            \"createdAt\": \"2019-07-16T19:51:52+08:00\"\n        },\n        {\n            \"id\": 2,\n            \"userId\": 1,\n            \"brand\": \"The Body Shop\",\n            \"name\": \"The Body Shop Tea Tree Facial Wash\",\n            \"productType\": \"Facial Wash\",\n            \"skinConcern\": \"blemish skin\",\n            \"updatedAt\": \"2019-07-16T19:56:44+08:00\",\n            \"createdAt\": \"2019-07-16T19:56:44+08:00\"\n        }\n    ],\n    \"status\": {\n        \"message\": \"data fetched\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Single Skincare",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/1/skincare/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"1",
+						"skincare",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Single Skincare",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/1/skincare/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"1",
+								"skincare",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 11:57:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"userId\": 1,\n        \"brand\": \"Hada Labo\",\n        \"name\": \"Hada Labo Gokujyun Lotion\",\n        \"productType\": \"Hydrating Toner\",\n        \"skinConcern\": \"normal\",\n        \"updatedAt\": \"2019-07-16T19:51:52+08:00\",\n        \"createdAt\": \"2019-07-16T19:51:52+08:00\"\n    },\n    \"status\": {\n        \"message\": \"data fetched\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Skincare",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\" : {\n\t\t\"brand\" : \"Senka Update\",\n\t\t\"name\" : \"Senka Perfect Whip\",\n\t\t\"productType\" : \"Facial Wash\", \n\t\t\"skinConcern\" : \"normal to dry\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/2/skincare/3",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"2",
+						"skincare",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Skincare",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"brand\" : \"Senka Update\",\n\t\t\"name\" : \"Senka Perfect Whip\",\n\t\t\"productType\" : \"Facial Wash\", \n\t\t\"skinConcern\" : \"normal to dry\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/2/skincare/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"2",
+								"skincare",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 12:03:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "260"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"userId\": 2,\n        \"brand\": \"Senka Update\",\n        \"name\": \"Senka Perfect Whip\",\n        \"productType\": \"Facial Wash\",\n        \"skinConcern\": \"normal to dry\",\n        \"updatedAt\": \"2019-07-16T20:03:27.930937+08:00\",\n        \"createdAt\": \"2019-07-16T19:57:29+08:00\"\n    },\n    \"status\": {\n        \"message\": \"data updated\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Err - Delete Skincare",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 12:04:37 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"bad_request\",\n    \"error_description\": \"data user tidak dapat dihapus : silahkan hapus data skincare terlebih dahulu\",\n    \"status\": 400\n}"
+				},
+				{
+					"name": "Succes - Delete User",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 12:08:02 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"message\": \"ok\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Skincare",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/v1/user/user/2/skincare/4",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"user",
+						"2",
+						"skincare",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Skincare",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/v1/user/user/2/skincare/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"user",
+								"user",
+								"2",
+								"skincare",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Jul 2019 12:05:20 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"message\": \"ok\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
