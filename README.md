@@ -1,4 +1,4 @@
-# golang-sample-api
+# sample-golang-api
 Sample API Using GoLang gin-gonic Framework
 
 
